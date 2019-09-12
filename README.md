@@ -31,9 +31,9 @@ This has the benefit of allowing for a bit more structure and organization of th
 ## Vim Filetype Configuration
 
 There are a few special directories thet Vim will look in to define specific configurations.
-- ## ftdetect - If you have files in an `~/.vim/ftdetect` folder, Vim will automatically run those files every time a new file is opened to allow you to dynamically detect and set the filetype. This is useful for files like markdown (`*.md`) which Vim would otherwise mistakenly treat as "modula2" files.
+- # ftdetect - If you have files in an `~/.vim/ftdetect` folder, Vim will automatically run those files every time a new file is opened to allow you to dynamically detect and set the filetype. This is useful for files like markdown (`*.md`) which Vim would otherwise mistakenly treat as "modula2" files.
 
-- ## ftplugin - The files in this directory will be run based on their filename for a given filetype. For instance, a `~/.vim/ftplugin/markdown.vim` config file will be run for all markdown files. This allows for filetype specific configurations.
+- # ftplugin - The files in this directory will be run based on their filename for a given filetype. For instance, a `~/.vim/ftplugin/markdown.vim` config file will be run for all markdown files. This allows for filetype specific configurations.
 
 ## Zsh configuration
 Similar to Vundle for Vim, there is [Antigen for zsh](https://github.com/zsh-users/antigen) which acts as a plugin downloader and manager for zsh. It can target anything in [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) allowing to pick and choose specific pieces without needing to install the full oh-my-zsh.
@@ -46,7 +46,7 @@ Git allows us to define custom aliases that run just like git commands. These ar
 ```bash
 # Create a git alias, runnable as `git unstage` to unstage files.
 $ git config --global alias.unstage 'reset HEAD --'
-
+```
 ## Scripts
 
 Git will automatically run any script that matches the subcommand name which allows us to create more complex git commands ourself. For example, if we run `git newbranch`, git will look on our PATH for any script called `git-newbranch` and will execute it if found.
